@@ -1,0 +1,134 @@
+[[10]
+ [10]
+ [ 0]
+ ...
+ [ 4]
+ [ 8]
+ [ 2]]
+[[0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 0. 0. 0.]
+ [1. 0. 0. ... 0. 0. 0.]
+ ...
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 0. ... 0. 0. 0.]
+ [0. 0. 1. ... 0. 0. 0.]]
+Model: "sequential_22"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv2d_110 (Conv2D)          (None, 16, 16, 96)        2688      
+_________________________________________________________________
+max_pooling2d_66 (MaxPooling (None, 8, 8, 96)          0         
+_________________________________________________________________
+batch_normalization_66 (Batc (None, 8, 8, 96)          384       
+_________________________________________________________________
+conv2d_111 (Conv2D)          (None, 8, 8, 256)         614656    
+_________________________________________________________________
+max_pooling2d_67 (MaxPooling (None, 3, 3, 256)         0         
+_________________________________________________________________
+batch_normalization_67 (Batc (None, 3, 3, 256)         1024      
+_________________________________________________________________
+conv2d_112 (Conv2D)          (None, 3, 3, 384)         885120    
+_________________________________________________________________
+conv2d_113 (Conv2D)          (None, 3, 3, 384)         1327488   
+_________________________________________________________________
+conv2d_114 (Conv2D)          (None, 3, 3, 256)         884992    
+_________________________________________________________________
+max_pooling2d_68 (MaxPooling (None, 1, 1, 256)         0         
+_________________________________________________________________
+batch_normalization_68 (Batc (None, 1, 1, 256)         1024      
+_________________________________________________________________
+flatten_22 (Flatten)         (None, 256)               0         
+_________________________________________________________________
+dense_66 (Dense)             (None, 4096)              1052672   
+_________________________________________________________________
+dropout_44 (Dropout)         (None, 4096)              0         
+_________________________________________________________________
+dense_67 (Dense)             (None, 4096)              16781312  
+_________________________________________________________________
+dropout_45 (Dropout)         (None, 4096)              0         
+_________________________________________________________________
+dense_68 (Dense)             (None, 20)                81940     
+=================================================================
+Total params: 21,633,300
+Trainable params: 21,632,084
+Non-trainable params: 1,216
+_________________________________________________________________
+Epoch 1/100
+391/391 [==============================] - 10s 24ms/step - loss: 3.0727 - accuracy: 0.1820 - val_loss: 2.9022 - val_accuracy: 0.2375
+
+Epoch 00001: val_accuracy improved from -inf to 0.23750, saving model to AlexNet_CIFAR100.h5
+Epoch 2/100
+391/391 [==============================] - 9s 23ms/step - loss: 2.0907 - accuracy: 0.3518 - val_loss: 2.0165 - val_accuracy: 0.3835
+
+Epoch 00002: val_accuracy improved from 0.23750 to 0.38350, saving model to AlexNet_CIFAR100.h5
+Epoch 3/100
+391/391 [==============================] - 9s 23ms/step - loss: 1.8036 - accuracy: 0.4399 - val_loss: 1.8207 - val_accuracy: 0.4344
+
+Epoch 00003: val_accuracy improved from 0.38350 to 0.43440, saving model to AlexNet_CIFAR100.h5
+Epoch 4/100
+391/391 [==============================] - 9s 23ms/step - loss: 1.6778 - accuracy: 0.4825 - val_loss: 2.3290 - val_accuracy: 0.2998
+
+Epoch 00004: val_accuracy did not improve from 0.43440
+Epoch 5/100
+391/391 [==============================] - 9s 23ms/step - loss: 1.4312 - accuracy: 0.5545 - val_loss: 1.9709 - val_accuracy: 0.4545
+
+Epoch 00005: val_accuracy improved from 0.43440 to 0.45450, saving model to AlexNet_CIFAR100.h5
+Epoch 6/100
+391/391 [==============================] - 9s 23ms/step - loss: 1.3884 - accuracy: 0.5725 - val_loss: 1.9386 - val_accuracy: 0.4624
+
+Epoch 00006: val_accuracy improved from 0.45450 to 0.46240, saving model to AlexNet_CIFAR100.h5
+
+Epoch 00006: ReduceLROnPlateau reducing learning rate to 0.00020000000949949026.
+Epoch 7/100
+391/391 [==============================] - 9s 23ms/step - loss: 0.8569 - accuracy: 0.7248 - val_loss: 1.5738 - val_accuracy: 0.5602
+
+Epoch 00007: val_accuracy improved from 0.46240 to 0.56020, saving model to AlexNet_CIFAR100.h5
+Epoch 8/100
+391/391 [==============================] - 9s 23ms/step - loss: 0.5961 - accuracy: 0.8084 - val_loss: 1.6773 - val_accuracy: 0.5666
+
+Epoch 00008: val_accuracy improved from 0.56020 to 0.56660, saving model to AlexNet_CIFAR100.h5
+Epoch 9/100
+391/391 [==============================] - 9s 23ms/step - loss: 0.4360 - accuracy: 0.8597 - val_loss: 1.9199 - val_accuracy: 0.5691
+
+Epoch 00009: val_accuracy improved from 0.56660 to 0.56910, saving model to AlexNet_CIFAR100.h5
+Epoch 10/100
+391/391 [==============================] - 9s 23ms/step - loss: 0.3088 - accuracy: 0.9009 - val_loss: 2.3228 - val_accuracy: 0.5490
+
+Epoch 00010: val_accuracy did not improve from 0.56910
+
+Epoch 00010: ReduceLROnPlateau reducing learning rate to 4.0000001899898055e-05.
+Epoch 11/100
+391/391 [==============================] - 9s 23ms/step - loss: 0.1776 - accuracy: 0.9469 - val_loss: 2.4225 - val_accuracy: 0.5660
+
+Epoch 00011: val_accuracy did not improve from 0.56910
+Epoch 12/100
+391/391 [==============================] - 9s 23ms/step - loss: 0.1301 - accuracy: 0.9630 - val_loss: 2.6337 - val_accuracy: 0.5645
+
+Epoch 00012: val_accuracy did not improve from 0.56910
+Epoch 13/100
+391/391 [==============================] - 9s 23ms/step - loss: 0.1111 - accuracy: 0.9690 - val_loss: 2.8397 - val_accuracy: 0.5627
+
+Epoch 00013: val_accuracy did not improve from 0.56910
+
+Epoch 00013: ReduceLROnPlateau reducing learning rate to 8.000000525498762e-06.
+Epoch 14/100
+391/391 [==============================] - 9s 23ms/step - loss: 0.0899 - accuracy: 0.9748 - val_loss: 2.8860 - val_accuracy: 0.5652
+
+Epoch 00014: val_accuracy did not improve from 0.56910
+Epoch 15/100
+391/391 [==============================] - 9s 23ms/step - loss: 0.0846 - accuracy: 0.9790 - val_loss: 2.9186 - val_accuracy: 0.5635
+
+Epoch 00015: val_accuracy did not improve from 0.56910
+Epoch 16/100
+391/391 [==============================] - 9s 23ms/step - loss: 0.0790 - accuracy: 0.9785 - val_loss: 2.9630 - val_accuracy: 0.5637
+Restoring model weights from the end of the best epoch.
+
+Epoch 00016: val_accuracy did not improve from 0.56910
+
+Epoch 00016: ReduceLROnPlateau reducing learning rate to 1.6000001778593287e-06.
+Epoch 00016: early stopping
+Test loss: 1.5737870931625366
+Test accuracy: 0.5601999759674072
+dict_keys(['loss', 'accuracy', 'val_loss', 'val_accuracy', 'lr'])
+2 min 41 sec
